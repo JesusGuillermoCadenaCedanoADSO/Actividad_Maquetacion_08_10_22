@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Starbucks Website Landing Page</title>
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <title>Responsive Starbucks Website Landing Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,7 +11,8 @@
         <div class="circle"></div>
         <header>
             <a href="#"><img src="img/logo.png" class="logo"></a>
-            <ul>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">What's New</a></li>
@@ -50,6 +52,12 @@
             function changeCircleColor(color){
                 const circle = document.querySelector('.circle');
                 circle.style.background=color;
+            }
+            function toggleMenu(){
+                var menuToggle=document.querySelector('.toggle');
+                var navigation=document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
             }
     </script>
 
